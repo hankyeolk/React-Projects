@@ -1,0 +1,31 @@
+.palette {
+  display: flex;
+  justify-content: center;
+}
+.colorBox {
+  height: 2rem;
+  width: 2rem;
+  opacity: 0.5;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.colorBox:hover {
+  opacity: 1;
+}
+
+.default-color {
+  background: rgb(52, 58, 64);
+}
+.pink-color {
+  background: rgb(240, 62, 62);
+}
+.green-color {
+  background: rgb(18, 184, 134);
+}
+.blue-color {
+  background: rgb(34, 138, 230);
+}
+
+.active {
+  opacity: 1;
+}

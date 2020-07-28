@@ -22,14 +22,16 @@ class App extends Component {
   // Form 컴포넌트의 add button에 묶일 이벤트핸들러
   handleCreate = () => {
     const { input, todos } = this.state;
-    this.setState({
-      input: "", // input은 클릭하여 등록하는 순간 비워준다.
-      todos: todos.concat({
-        id: this.id++,
-        text: input,
-        checked: false,
-      }),
-    });
+    if (input !== "") {
+      this.setState({
+        input: "", // input은 클릭하여 등록하는 순간 비워준다.
+        todos: todos.concat({
+          id: this.id++,
+          text: input,
+          checked: false,
+        }),
+      });
+    }
   };
 
   // enter keypress event handler
