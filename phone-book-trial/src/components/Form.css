@@ -1,0 +1,26 @@
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  justify-content: start;
+  flex-direction: row;
+}
+
+.form-input {
+  border: none;
+  background: none;
+  display: flex;
+
+  margin: 5px;
+  padding: 3px;
+  border-bottom: 1px solid #a5d8ff;
+}
+
+.form-wrapper button {
+  background: #a5d8ff;
+  color: white;
+  align-items: center;
+  border: none;
+  border-radius: 3px;
+  margin-left: 20px;
+}
