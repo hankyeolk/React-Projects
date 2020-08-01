@@ -8,6 +8,12 @@ class PhoneInfoList extends Component {
     onUpdate: () => console.warn("onUpdate not defined"),
   };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    // state에 대한 업데이트가 있다면, true
+    // 없다면 false
+    return nextProps.data !== this.props.data;
+  }
+
   render() {
     const { data, onRemove, onUpdate } = this.props;
     const list = data.map((info) => (

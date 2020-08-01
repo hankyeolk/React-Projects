@@ -12,6 +12,11 @@ class Info extends Component {
     },
   };
 
+  handleRemove = () => {
+    const { info, onRemove } = this.props;
+    onRemove(info.id);
+  };
+
   render() {
     // Info 컴포넌트가 사용되는 부분에서 info props에 대한 정의가 필요하다.
     const { name, phone } = this.props.info;
@@ -19,6 +24,7 @@ class Info extends Component {
       <div className="info-wrapper">
         <div className="user-name">{name}</div>
         <div className="phone-number">{phone}</div>
+        <button onClick={this.handleRemove}>삭제</button>
       </div>
     );
   }

@@ -29,12 +29,21 @@ class App extends Component {
     });
   };
 
+  // InfoList의 onRemove 속성에서 사용될 함수
+  handleRemove = (id) => {
+    const { information } = this.state;
+    this.setState({
+      // 인자로 받는 id에 해당하는 요소를 제외하고 state를 갱신
+      information: information.filter((el) => el.id !== id),
+    });
+  };
+
   render() {
     const { information } = this.state;
     return (
       <div className="App-wrapper">
         <Form onCreate={this.handleSend} />
-        <InfoList data={information} />
+        <InfoList data={information} onRemove={this.handleRemove} />
       </div>
     );
   }
